@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from "react";
-import video from "./video/I_background.mp4";
+const video=require("./video/I_background.mp4")
 
 const I_back_style = styled.div`
 

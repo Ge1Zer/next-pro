@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import React from "react";
-import img from './video/back_Library.jpg'
+
+const img=require("./video/back_Library.jpg")
 
 const Library_back_style = styled.div`
 
