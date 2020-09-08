@@ -79,7 +79,7 @@ export default function MenuLibrary({menu=[]}) {
                                         <ul>
                                             {r.list.sort().map(e =>
                                                 <li className={'list_3'}>
-                                                    <Link href={`/library/[id]`} as={`/library/${e}`}>
+                                                    <Link href={`/libraryPage/[id]`} as={`/libraryPage/${e}`}>
                                                         <a>{e}</a>
                                                     </Link>
                                                 </li>
