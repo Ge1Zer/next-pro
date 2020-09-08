@@ -38,16 +38,10 @@ const ListMenu = styled.ul`
    
 `
 
-export default function MenuLibrary({menu=[]}) {
+export default function MenuLibrary({menu}) {
 
-    let [menus,setMenu] = useState(menu)
-    if(menus.length===0){
-        (async ()=>{
-            let response = await fetch('/api/libraryList')
-            let menu = await response.json()
-            setMenu(menu)
-        })()
-    }
+
+
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
@@ -55,7 +49,7 @@ export default function MenuLibrary({menu=[]}) {
     return (
 
         <ListMenu>
-            {menus.map(i => {
+            {menu.map(i => {
 
                 let ri = getRandomInt(10000)
                 return (
