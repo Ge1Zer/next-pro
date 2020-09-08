@@ -30,12 +30,18 @@ let I_style = styled.div`
     &>.I_text{
         font-size:3em;
         color:white;
+        @media (max-width : 768px) {
+        &{
+        font-size:2em;
+        }
+        }
     &:hover{
         color:#ffa500;
     }
   }
  
   }
+  
 
   & > div:nth-child(1) {
     grid-area: a;
