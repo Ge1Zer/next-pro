@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import React from "react";
-const video=require("./file/I_background.mp4")
 
 const I_back_style = styled.div`
 
@@ -32,7 +31,7 @@ const I_back_style = styled.div`
 let I_back = ({children})=>{
  return(
      <I_back_style>
-         <video src={video} muted autoPlay loop/>
+         <video src={'https://www.vidsplay.com/wp-content/uploads/2017/04/stormy_beach.mp4?_=1'} muted autoPlay loop/>
          <div className={'font_side'}>{children}</div>
      </I_back_style>
 
