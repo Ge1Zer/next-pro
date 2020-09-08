@@ -5,7 +5,7 @@ export default class Work {
     @observable work=[];
 
     @action getListWork() {
-        fetch( 'http://localhost:3000/api/work',{
+        fetch( '/api/work',{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
