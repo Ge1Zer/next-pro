@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from "react";
-const img=require('./video/depositphotos_261698250-stock-illustration-rock-paintings-background-seamless-pattern.jpg')
+const img=require('./video/back_Library.jpg')
 
 const Library_back_style = styled.div`
 
