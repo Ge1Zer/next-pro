@@ -71,12 +71,12 @@ export default function LibraryPage({menu, page}) {
 LibraryPage.getInitialProps= async ({query})=>{
 
     let resp,page;
-    let response = await fetch('http://localhost:3000/api/libraryList')
+    let response = await fetch('/api/libraryList')
     let menu = await response.json()
 
 //================page=======>
     if(query){
-        resp = await fetch( `http://localhost:3000/api/libraryPage?page=`+query.id)
+        resp = await fetch( `/api/libraryPage?page=`+query.id)
         page = await resp.json()
     }
 //=============================================>
