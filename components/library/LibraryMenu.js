@@ -43,7 +43,7 @@ export default function MenuLibrary({menu=[]}) {
     let [menus,setMenu] = useState(menu)
     if(menus.length===0){
         (async ()=>{
-            let response = await fetch('http://localhost:3000/api/libraryList')
+            let response = await fetch('/api/libraryList')
             let menu = await response.json()
             setMenu(menu)
         })()
