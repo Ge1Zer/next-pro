@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from "react";
-
+const img=require('./video/depositphotos_261698250-stock-illustration-rock-paintings-background-seamless-pattern.jpg')
 
 const Library_back_style = styled.div`
 
@@ -32,7 +32,7 @@ const Library_back_style = styled.div`
 
 let Library_back = ({children})=>{
     return(
-        <Library_back_style img={require('./video/depositphotos_261698250-stock-illustration-rock-paintings-background-seamless-pattern.jpg')}>
+        <Library_back_style img={img}>
             <div className={'back'}/>
             <div className={'font_side'}>{children}</div>
         </Library_back_style>
