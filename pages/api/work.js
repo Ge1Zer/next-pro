@@ -53,7 +53,7 @@ export default function (req,res){
             name:'Portfolio',
             text:'SSR(NextJS)-golden middle. Google Search - yes SPA - yes. Begun with Redux but the app was getting heavy.(but working)',
             stack:['NextJS(SSR)', 'React', 'MobX', 'styled-components', 'SASS(at the layout stage)', '(mongoose)'],
-            link:'https://next-pro-ocsq2wsih.vercel.app',
+            link:'/',
         },{
             id:5,
             photo:{id:50},
