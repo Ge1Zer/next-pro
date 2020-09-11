@@ -5,6 +5,9 @@ const withImages = require('next-images')
 module.exports = withVideos(withImages({
     assetDirectory: 'static'
     , webpack(config, options) {return config}
+    ,env: {
+        baseUrl: process.env.BASE_URL || process.env.VERCEL_URL,
+    }
     ,exportPathMap() {
         return {
             '/': {page: '/'},

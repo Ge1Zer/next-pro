@@ -5,7 +5,7 @@ export default class Work {
     @observable work=[];
 
     @action getListWork() {
-        fetch( '/api/work',{
+        fetch( `${process.env.baseUrl}/api/work`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
