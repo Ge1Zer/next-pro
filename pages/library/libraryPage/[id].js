@@ -1,12 +1,12 @@
-import MenuLibrary from "../../components/library/LibraryMenu";
+import MenuLibrary from "../../../components/library/LibraryMenu";
 import React from "react";
-import LibraryPageCurrent from "../../components/library/LibraryPageCurrent";
-import LibraryPageDefault from "../../components/library/LibraryPageDefault";
-import Layout from "../../components/Layout";
+import LibraryPageCurrent from "../../../components/library/LibraryPageCurrent";
+import LibraryPageDefault from "../../../components/library/LibraryPageDefault";
+import Layout from "../../../components/Layout";
 import styled from 'styled-components'
-import Library_back from "../../components/Library_back";
-import LibraryPage_style from "../../components/library/LibraryPage_style";
-import {baseURI} from '../../url'
+import Library_back from "../../../components/Library_back";
+import LibraryPage_style from "../../../components/library/LibraryPage_style";
+import {baseURI} from '../../../url'
 
 
 
