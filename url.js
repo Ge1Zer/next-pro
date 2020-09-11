@@ -1,5 +1,5 @@
 module.exports = {
-    baseURI:'https://next-pro-mu.vercel.app'
+    baseURI:'https://next-pro-self.vercel.app'
 
     // baseURI:'http://localhost:3000'
 }

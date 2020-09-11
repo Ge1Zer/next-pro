@@ -11,11 +11,11 @@ module.exports = withVideos(withImages({
             '/i': {page: '/i'},
             '/work': {page: '/work'},
             '/library': {page: '/library'},
-            '/libraryPage/side=HTML5&page=Simple': {page: '/libraryPage',query:{ side:"HTML5",page:'Simple' }},
-            '/libraryPage/side=CSS3&page=Simple': {page: '/libraryPage',query:{ side:"CSS3",page:'Simple' }},
-            '/libraryPage/side=SASS&page=Simple': {page: '/libraryPage',query:{ side:"SASS",page:'Simple' }},
-            '/libraryPage/side=React&page=Native': {page: '/libraryPage',query:{ side:"React",page:'Native' }},
-            '/libraryPage/side=Native&page=Simple': {page: '/libraryPage',query:{ side:"Native",page:'Simple' }},
+            '/library/side=HTML5&page=Simple': {page: '/library',query:{ side:"HTML5",page:'Simple' }},
+            '/library/side=CSS3&page=Simple': {page: '/library',query:{ side:"CSS3",page:'Simple' }},
+            '/library/side=SASS&page=Simple': {page: '/library',query:{ side:"SASS",page:'Simple' }},
+            '/library/side=React&page=Native': {page: '/library',query:{ side:"React",page:'Native' }},
+            '/library/side=Native&page=Simple': {page: '/library',query:{ side:"Native",page:'Simple' }},
         }
     }
     })
