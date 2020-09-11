@@ -6,7 +6,7 @@ module.exports = withVideos(withImages({
     assetDirectory: 'static'
     , webpack(config, options) {return config}
     ,env: {
-        baseUrl: "https://next-pro-self.vercel.app" //process.env.BASE_URL || process.env.VERCEL_URL,
+        baseUrl: "https://next-pro-inky.vercel.app" //process.env.BASE_URL || process.env.VERCEL_URL,
     }
     ,exportPathMap() {
         return {
