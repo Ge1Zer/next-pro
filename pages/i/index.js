@@ -10,7 +10,7 @@ let I_style = styled.div`
   font-size:2em;
   display: grid;
   background:rgba(0,0,0,0);
-
+ cursor:default;
   grid-template-columns: 1em auto 1em;
   grid-template-rows: 1em auto 1em;
   grid-template-areas:
@@ -30,13 +30,14 @@ let I_style = styled.div`
     &>.I_text{
         font-size:3em;
         color:white;
+        cursor:default;
         @media (max-width : 768px) {
-        &{
-        font-size:2em;
-        }
+            &{ font-size:2em }
         }
     &:hover{
-        color:#ffa500;
+       color:#ffa500;
+       transition: color 0.3s linear;
+       
     }
   }
  
@@ -68,6 +69,7 @@ let I_style = styled.div`
     position: absolute;
     text-align: center;
     letter-spacing: 5px;
+    
   }
 }
 
@@ -79,6 +81,7 @@ let I_style = styled.div`
     animation-delay: 10s;
     opacity: 0;
   }
+  
 }
 
 .lineString_gor{

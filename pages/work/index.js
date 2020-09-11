@@ -9,25 +9,27 @@ const Work_style = styled.div`
     height:auto;
 
     &>div:nth-child(even){
-     -webkit-filter: brightness(80%);
-            filter: brightness(80%);
-            
-        flex-flow: row-reverse nowrap;
-         background: rgba(255,165,0,1);
+            -webkit-filter: brightness(50%);
+            filter: brightness(50%);
+           
+            flex-flow: row-reverse nowrap;
+            background: rgba(255,165,0,1);
          
          &:hover{
-          -webkit-filter: brightness(100%);
+            transition: filter 0.5s linear;
+            -webkit-filter: brightness(100%);
             filter: brightness(100%);
          }
       
     }
       &>div:nth-child(odd){
-         background: rgba(255,165,0,1);
-        -webkit-filter: brightness(80%);
-            filter: brightness(80%);
+            background: rgba(255,165,0,1);
+            -webkit-filter: brightness(50%);
+            filter: brightness(50%);
             
- &:hover{
-          -webkit-filter: brightness(100%);
+         &:hover{
+            transition: filter 0.5s linear;
+            -webkit-filter: brightness(100%);
             filter: brightness(100%);
          }
     }

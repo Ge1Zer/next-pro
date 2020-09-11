@@ -20,13 +20,18 @@ const Menu_style = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+     
   }
   &>li>a:hover{
-    color:#ffa500;
+   border-bottom:1px solid #ffa500;
+   color:#ffa500;
+   transition: color 0.3s linear;
+   transition: border-bottom 0.3s linear; 
   }
   
   &>li>a{
     color: white;
+    border-bottom:1px solid transparent;
   }
 }
 @media (max-width : 768px) {

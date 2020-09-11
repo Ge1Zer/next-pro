@@ -14,6 +14,7 @@ let Work_item_style = styled.div`
       &>a>img{
         width:100%;
         height:100%;
+       
       }
   }
   &>.work_vi_desc{
