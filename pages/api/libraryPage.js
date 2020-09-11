@@ -1,86 +1,72 @@
 export default function (req,res){
     let LibraryPage = [
         {
-            id:'1', keyWord:'useEffect', content:{
-                name:'name page',
-                text:'jhgjlgdljkss;kjad',
-                photo:{id:11}
+            id: '1', keySide: 'HTML5', keyPage: 'Simple', content: {
+                name: 'HTML5',
+                text: 'HyperText Markup Language',
+                photo: {id: 11}
             }
-        },{
-            id:'2', keyWord:'function', content:{
-                name:'name page function',
-                text:'function jhgjlgdljkss;kjad',
-                photo:{id:22}
+        }, {
+            id: '2', keySide: 'CSS3', keyPage: 'Simple', content: {
+                name: 'CSS3',
+                text: 'Cascading Style Sheets',
+                photo: {id: 21}
             }
-        },{
-            id:'3', keyWord:'useState', content:{
-                name:'name page useState',
-                text:'function jhgjlgdljkss;kjad',
-                photo:{id:22}
+        }, {
+            id: '3', keySide: 'SASS', keyPage: 'Simple', content: {
+                name: 'SASS/LESS',
+                text: 'Syntactically Awesome Stylesheets',
+                photo: {id: 31}
             }
-        },{
-            id:'4', keyWord:'variable', content:{
-                name:'name page variable',
-                text:'function jhgjlgdljkss;kjad',
-                photo:{id:22}
+        }, {
+            id: '4', keySide: 'Native', keyPage: 'Simple', content: {
+                name: 'JS Native',
+                text: 'JavaScript Native',
+                photo: {id: 41}
+            }
+        }, {
+            id: '4', keySide: 'React', keyPage: 'Native', content: {
+                name: 'React',
+                text: 'A JavaScript library for building user interfaces',
+                photo: {id: 51}
             }
         }
     ]
 
-    let img=[
-        {id:10, photo:[
-                {id:1, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:2, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:3, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:4, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-            ]},
-        {id:20,  photo:[
-                {id:1, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:2, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:3, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:4, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-            ]},
-        {id:30,  photo:[
-                {id:1, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:2, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:3, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:4, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-            ]},
-        {id:40,  photo:[
-                {id:1, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:2, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:3, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:4, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-            ]},
-        {id:50,  photo:[
-                {id:1, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:2, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:3, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:4, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-            ]},
-        {id:11, photo:[
-                {id:1, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:2, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:3, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:4, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-            ]},
-        {id:22,  photo:[
-                {id:1, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:2, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:3, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:4, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-            ]},
-        {id:33,  photo:[
-                {id:1, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:2, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:3, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-                ,{id:4, img:'https://wallpaperscave.ru/images/original/18/06-02/abstract-colors-53631.jpg'}
-            ]},
+    let img = [
+        {
+            id: 11, photo: [
+                {id: 1, img: 'https://img3.goodfon.ru/original/2048x1200/0/e7/html5-html-hyper-text-markup.jpg'}
+            ]
+        },
+        {
+            id: 21, photo: [
+                {id: 1, img: 'https://fb.ru/misc/i/gallery/59435/2872074.jpg'}
+            ]
+        },
+        {
+            id: 31, photo: [
+                {id: 1, img: 'https://miro.medium.com/max/1200/1*6zW9HxeJH_UPxHJcI4h5dQ.png'}
+            ]
+        },
+        {
+            id: 41, photo: [
+                {id: 1, img: 'https://www.andyshora.com/img/posts/og-js.png'}
+            ]
+        },
+
+        {
+            id: 51, photo: [
+                {id: 1, img: 'https://media.proglib.io/wp-uploads/2018/03/react-native-tutorials.png'}
+            ]
+        },
     ]
 
-    let num = req.query.page
+    let page = req.query.page
+    let side = req.query.side
+
     let library=[ ...LibraryPage]
-    let elem = library.filter(i=>i.keyWord===num)
+    let elem = library.filter(i=>i.keyPage===page && i.keySide===side)
     elem[0].content.ListPhoto=img.filter(r=>r.id===elem[0].content.photo.id)[0]
     res.json(elem[0])
 }

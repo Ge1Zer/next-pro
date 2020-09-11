@@ -6,6 +6,7 @@ import Layout from "../../components/Layout";
 import styled from 'styled-components'
 import Library_back from "../../components/Library_back";
 import LibraryPage_style from "../../components/library/LibraryPage_style";
+import {baseURI} from '../../url'
 
 
 
@@ -30,11 +31,11 @@ export default function LibraryPage({menu, page}) {
 LibraryPage.getInitialProps= async ({query})=>{
 
     let resp,page;
-    let response = await fetch('/api/libraryList')
+    let response = await fetch(`${baseURI}/api/libraryList`)
     let menu = await response.json()
 
 //================page=======>
-        resp = await fetch( `/api/libraryPage?page=`+query.id)
+        resp = await fetch( `${baseURI}/api/libraryPage?`+query.id)
         page = await resp.json()
 //=============================================>
 

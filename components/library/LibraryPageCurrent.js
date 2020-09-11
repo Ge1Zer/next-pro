@@ -19,6 +19,7 @@ let LibraryPageCurrent_style = styled.div`
   &>p{
    color:black;
    margin: 0 40px 0 0;
+   border-bottom: 1px solid black;
   }
 }
 #name{
@@ -58,11 +59,11 @@ let LibraryPageCurrent_style = styled.div`
 
 let LibraryPageCurrent;
 export default LibraryPageCurrent=({page})=>{
-    console.log(page)
+
     return (
         <LibraryPageCurrent_style>
-            <div id={'key'}><p>{page.keyWord}</p></div>
-            <div id={'name'}><p>{page.content.name}</p></div>
+            <div id={'key'}><p>{page.keySide}</p></div>
+            <div id={'name'}><p>{page.keyPage}</p></div>
             <div id={'text'}><p>{page.content.text}</p></div>
             <div className={'library_list_photo'} id={'photo'}>
                 {
