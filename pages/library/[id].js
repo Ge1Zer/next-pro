@@ -29,6 +29,7 @@ export default function LibraryPage({menu, page}) {
     )
 }
 LibraryPage.getInitialProps= async ({query})=>{
+    console.log(query)
 
     let resp,page;
     let response = await fetch(`${baseURI}/api/libraryList`)
