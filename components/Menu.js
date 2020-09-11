@@ -119,9 +119,7 @@ export default function Menu({children}){
                             <li><Link href='/library'><a>library</a></Link></li>
                         </ul>
             </Menu_style>
-
                 {children}
-
         </>
 
     )

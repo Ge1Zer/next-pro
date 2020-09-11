@@ -12,6 +12,7 @@ export default class Work {
             },
         }).then(r =>r.json())
             .then(t=>{
+                console.log(t.sort( (a,b)=>a.id-b.id) )
                 this.work = t
 
             })

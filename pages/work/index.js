@@ -1,21 +1,59 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Layout from "../../components/Layout";
+import Work_item from "../../components/work/Work_item";
+import {inject, observer} from "mobx-react";
+import styled from "styled-components";
 
-import styled from 'styled-components'
-import Work_Page from "../../components/Work_Page";
+const Work_style = styled.div`
+    
+    height:auto;
 
+    &>div:nth-child(even){
+     -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+            
+        flex-flow: row-reverse nowrap;
+         background: rgba(255,165,0,1);
+         
+         &:hover{
+          -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+         }
+      
+    }
+      &>div:nth-child(odd){
+         background: rgba(255,165,0,1);
+        -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+            
+ &:hover{
+          -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+         }
+    }
+@media (max-width : 768px) {
+  &>div:nth-child(even){           
+        flex-flow: column-reverse nowrap;
+  }
+}
+`
 
+let Work;
+export default Work = inject('store')(observer((props) => {
 
-class Work extends React.Component{
+    useEffect(() => {
+        props.store.work.getListWork()
+    }, [])
 
-
-
-    render() {
         return (
             <Layout>
-               <Work_Page />
+                <Work_style>
+                    {props.store.work.work.map(i =>
+                        <Work_item i={i}/>
+                        )
+                    }
+                </Work_style>
             </Layout>
         )
     }
-}
-export default Work;
+))

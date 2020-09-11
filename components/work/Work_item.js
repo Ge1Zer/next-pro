@@ -3,13 +3,15 @@ import React, {useState} from "react";
 
 let Work_item_style = styled.div`
 @media (max-width : 768px) {
-    flex-direction:column;
+    flex-direction:column-reverse;
+    
+     #text{text-align:justify;}
 }
  display:flex;
 
  &>.work_vi_photo{
     flex: 0 0 50%;
-      &>img{
+      &>a>img{
         width:100%;
         height:100%;
       }
@@ -17,11 +19,41 @@ let Work_item_style = styled.div`
   &>.work_vi_desc{
    flex: 0 0 50%;
    display:flex;
-   align-items: center;
+  
    justify-content: center ;
    flex-direction: column;
-   text-align: justify;
-   padding: 0 10px;
+   
+   &>div{
+      margin: 5px;
+   }
+   #name{
+  
+   text-align:center;
+   font-size:1.5em;
+   font-weight: 600 ;
+   
+   }
+   #stack{
+   text-align:justify;
+   border-bottom:1px solid black;
+   display:flex;
+   flex-flow: wrap;
+   
+   &>div{
+    flex: 1 1 auto;
+    text-align:center;
+    
+   }
+   }
+   #text{
+  
+    text-align:center;
+   }
+   #link{
+   
+    text-align:center;
+    
+   }
   }
   
   
@@ -32,19 +64,24 @@ let Work_item_style = styled.div`
 `
 let Work_item;
 export default Work_item=({i})=>{
-let {ListPhoto,name,text} = i
+    console.log(i)
+let {ListPhoto,name,text,stack, id,link  } = i
    let Li=ListPhoto.photo,cont = 0
-
+    console.log(stack)
     return(
         <Work_item_style>
                 <div className="work_vi_photo">
+                    <a href={link} target="_blank">
                     <img src={Li[cont].img} alt="pic"
-                        onClick={()=>cont===Li.length?cont=0:cont++}/>
+                         onClick={()=>cont===Li.length?cont=0:cont++}/>
+                    </a>
                 </div>
 
                 <div className="work_vi_desc">
-                    <div><label>{name}</label></div>
-                    <div>{text}</div>
+                    <div id={'name'}>{name}</div>
+                    <div id={'stack'}>{stack.map(i=><div>{i}</div>)}</div>
+                    <div id={'text'}>{text}</div>
+                    <div id={'link'}><a href={link} target="_blank">{link}</a></div>
                 </div>
         </Work_item_style>
     )
