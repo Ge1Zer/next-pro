@@ -53,6 +53,9 @@ let Work_item_style = styled.div`
    #link{
    
     text-align:center;
+    &>a{
+        color:#0000ff;
+    }
     
    }
   }
