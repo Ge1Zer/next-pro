@@ -1,1 +1,0 @@
-1. nexturl.js -- need thunk for public URL (api)
