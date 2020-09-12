@@ -81,13 +81,6 @@ let LibraryPageDefault_style = styled.div`
 let LibraryPage;
 export default LibraryPage=({pag})=>{
 
-
-    let [side,SetSide] = useState(pag?.keySide ?? 'key')
-    let [page,SetPage] = useState(pag?.keyPage ?? 'name')
-    let [text,SetText] = useState(pag?.content?.text ?? 'lorem')
-    let [photo,SetPhoto] = useState(pag?.content?.ListPhoto?.photo ?? [])
-
-
     return (
         <Library_back>
             <Layout>
@@ -96,11 +89,11 @@ export default LibraryPage=({pag})=>{
                         <MenuLibrary/>
                     </div>
                 {pag?<LibraryPageCurrent_style>
-                    <div id={'key'}><p>{side}</p></div>
-                    <div id={'name'}><p>{page}</p></div>
-                    <div id={'text'}><p>{text}</p></div>
+                    <div id={'key'}><p>{pag.keySide }</p></div>
+                    <div id={'name'}><p>{pag.keyPage}</p></div>
+                    <div id={'text'}><p>{pag.content.text }</p></div>
                     <div className={'library_list_photo'} id={'photo'}>
-                        {photo.map(i => <img src={i.img} alt={'d'}/>)}
+                        {pag.content.ListPhoto.photo.map(i => <img src={i.img} alt={'d'}/>)}
                     </div>
                 </LibraryPageCurrent_style>
                 :<LibraryPageDefault_style>
@@ -117,13 +110,15 @@ export default LibraryPage=({pag})=>{
 
 
 LibraryPage.getInitialProps = async ({query})=>{
-    let response,menu,resp,pag,r;
-    query.id === 'home'
-        ?
+    let pag, r;
+    if(query.id === 'home'){
         pag=undefined
-        :
-        pag=query.id
-        // pag = await fetch( `/api/libraryPage?`+query.id).then(resp=>resp.json())
+    }else{
+        pag = await fetch( `http://localhost:3000/api/libraryPage?key=`+query.id).then(i=>i.json())
+    }
+
+
+
 
 
     return{

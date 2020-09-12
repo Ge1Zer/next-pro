@@ -77,7 +77,7 @@ export default MenuLibrary=inject('store')(observer(({store})=>{
                                         <ul>
                                             {r.list.sort().map(e =>
                                                 <li className={'list_3'}>
-                                                    <Link href={`/library/[id]`} as={`/library/side=${r.frame}&page=${e}`}><a>{e}</a>
+                                                    <Link href={`/library/[id]`} as={`/library/${e.key}`}><a>{e.link}</a>
                                                     </Link>
                                                 </li>
                                             )}

@@ -1,31 +1,31 @@
 export default function (req,res){
     let LibraryPage = [
         {
-            id: '1', keySide: 'HTML5', keyPage: 'Simple', content: {
+            id: '1', keySide: 'HTML5', keyPage: 'Simple',key:'VOUDdmKDsMCVDWSzAJv', content: {
                 name: 'HTML5',
                 text: 'HyperText Markup Language',
                 photo: {id: 11}
             }
         }, {
-            id: '2', keySide: 'CSS3', keyPage: 'Simple', content: {
+            id: '2', keySide: 'CSS3', keyPage: 'Simple',key:'6MmEiiuZtDUt1GlRwpP', content: {
                 name: 'CSS3',
                 text: 'Cascading Style Sheets',
                 photo: {id: 21}
             }
         }, {
-            id: '3', keySide: 'SASS', keyPage: 'Simple', content: {
+            id: '3', keySide: 'SASS', keyPage: 'Simple',key:'DIeWGEzQWjIqJQZRTZk', content: {
                 name: 'SASS/LESS',
                 text: 'Syntactically Awesome Stylesheets',
                 photo: {id: 31}
             }
         }, {
-            id: '4', keySide: 'Native', keyPage: 'Simple', content: {
+            id: '4', keySide: 'Native', keyPage: 'Simple',key:'xzBOGKJ16PXMKyBtGQ9', content: {
                 name: 'JS Native',
                 text: 'JavaScript Native',
                 photo: {id: 41}
             }
         }, {
-            id: '4', keySide: 'React', keyPage: 'Native', content: {
+            id: '4', keySide: 'React', keyPage: 'Native',key:'ytt8YykPr9WE1iUjp2n', content: {
                 name: 'React',
                 text: 'A JavaScript library for building user interfaces',
                 photo: {id: 51}
@@ -62,11 +62,8 @@ export default function (req,res){
         },
     ]
 
-    let page = req.query.page
-    let side = req.query.side
-
     let library=[ ...LibraryPage]
-    let elem = library.filter(i=>i.keyPage===page && i.keySide===side)
+    let elem = library.filter(i=>i.key===req.query.key)
     elem[0].content.ListPhoto=img.filter(r=>r.id===elem[0].content.photo.id)[0]
     res.json(elem[0])
 }
