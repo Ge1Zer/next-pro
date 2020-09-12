@@ -62,7 +62,6 @@ export default function (req,res){
             stack:['html(html5)', 'css(sass)', 'js(jquery)'],
             link:'https://ge1zer.github.io/landing-page-for-companies',
         }
-
     ]
 
 

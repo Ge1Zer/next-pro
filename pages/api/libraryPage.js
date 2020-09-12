@@ -1,31 +1,30 @@
 export default function (req,res){
-    let LibraryPage = [
-        {
-            key:'tevi8', content: {
+    let ListPage = [
+        {id: '1', keySide: 'HTML5', keyPage: 'Simple',key:'tevi8', content: {
                 name: 'HTML5',
                 text: 'HyperText Markup Language',
                 photo: {id: 11}
             }
-        }, {
-            key:'4o90g', content: {
+        },
+        {id: '2', keySide: 'CSS3', keyPage: 'Simple',key:'4o90g', content: {
                 name: 'CSS3',
                 text: 'Cascading Style Sheets',
                 photo: {id: 21}
             }
-        }, {
-            key:'1b1qi', content: {
+        },
+        {id: '3', keySide: 'SASS', keyPage: 'Simple',key:'1b1qi', content: {
                 name: 'SASS/LESS',
                 text: 'Syntactically Awesome Stylesheets',
                 photo: {id: 31}
             }
-        }, {
-            key:'6iffi', content: {
+        },
+        {id: '4', keySide: 'Native', keyPage: 'Simple',key:'6iffi', content: {
                 name: 'JS Native',
                 text: 'JavaScript Native',
                 photo: {id: 41}
             }
-        }, {
-            key:'yzwra', content: {
+        },
+        {id: '4', keySide: 'React', keyPage: 'Native',key:'yzwra', content: {
                 name: 'React',
                 text: 'A JavaScript library for building user interfaces',
                 photo: {id: 51}
@@ -57,7 +56,8 @@ export default function (req,res){
         },
     ]
 
-    let elem = LibraryPage.filter(i=>i.key===req.query.key)
+    let elem = ListPage.filter(i=>i.key===req.query.key)
     elem[0].content.ListPhoto=img.filter(r=>r.id===elem[0].content.photo.id)[0]
     res.json(elem[0])
 }
+
