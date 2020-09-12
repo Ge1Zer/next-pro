@@ -1,7 +1,5 @@
+import I from "./i";
+
 export default function Home(){
-    return(
-        <>
-            hello
-        </>
-    )
+    return <I/>
 }
