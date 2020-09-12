@@ -114,7 +114,7 @@ LibraryPage.getInitialProps = async ({query})=>{
     if(query.id === 'home'){
         pag=undefined
     }else{
-        pag = await fetch( `http://localhost:3000/api/libraryPage?key=`+query.id).then(i=>i.json())
+        pag = await fetch( `/api/libraryPage?key=`+query.id).then(i=>i.json())
     }
 
 
