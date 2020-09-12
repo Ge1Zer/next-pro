@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Ge1Zer/next-pro/issues"
   },
-  "homepage": "https://github.com/Ge1Zer/next-pro#readme",
+  "homepage": "https://next-pro-iota.vercel.app",
   "dependencies": {
     "next": "^9.5.3",
     "react": "^16.13.1",
