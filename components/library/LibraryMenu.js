@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React,{useState,useEffect} from "react";
 import styled from 'styled-components'
+import {inject, observer} from "mobx-react";
 
 
 const ListMenu = styled.ul`
@@ -37,10 +38,12 @@ const ListMenu = styled.ul`
     }
    
 `
+let MenuLibrary;
+export default MenuLibrary=inject('store')(observer(({store})=>{
 
-export default function MenuLibrary({menu}) {
-    let [menus,SetMenu]=useState(menu ?? [])
-
+        useEffect(()=>{
+            store.menu.getListMenu()
+        },[])
 
 
 
@@ -50,7 +53,7 @@ export default function MenuLibrary({menu}) {
     return (
 
         <ListMenu>
-            {menus.map(i => {
+            {store.menu.menu.map(i => {
 
                 let ri = getRandomInt(10000)
                 return (
@@ -89,68 +92,4 @@ export default function MenuLibrary({menu}) {
             }
         </ListMenu>
     )
-}
-// <li>{r.frame}</li>
-// {r.list.map(e =>
-//     <li>
-//         <Link href={`/library/[id]`} as={`/library/${e}`}>
-//             <a>{e}</a>
-//         </Link>
-//     </li>
-// )}
-
-
-
-// {i.list.map(r => {
-//         console.log(r)
-//         return <>
-//             <lable forHtml={r.id}>
-//                 <input type="checkbox" id={r.id}/>
-//                 <span>{r.frame}</span>
-//             </lable>
-//             <ul>
-//                 <li>1</li>
-//             </ul>
-//         </>
-//     }
-// )
-// }
-
-
-
-// border: 1px solid red;
-//
-// &>ul>.list_2{
-//     border: 1px solid blue
-//     &>ul>.list_3{
-//         border: 1px solid green
-//     }
-// }
-
-
-
-
-//
-// {i.list.map(r => {
-//     let ris = getRandomInt(10000)
-//     return (
-//         <li className={'list_2'}>
-//             <label htmlFor={`s=${ris}`}>
-//                 <input type={'checkbox'} id={`s=${ris}`}/>
-//                 <span>{r.frame}</span>
-//             </label>
-//             <ul>
-//                 {
-//                     r.list.map(e => {
-//                         return (
-//                             <li className={'list_3'}>
-//                                 {e}
-//                             </li>
-//                         )
-//                     })
-//                 }
-//             </ul>
-//         </li>
-//     )
-// })
-// }
+}))

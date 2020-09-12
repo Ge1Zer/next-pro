@@ -1,9 +1,10 @@
 import Layout from "../../components/Layout";
 import Library_back from "../../components/library/Library_back";
 import styled from "styled-components";
-import React,{useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import MenuLibrary from "../../components/library/LibraryMenu";
 import LibraryPage_style from "../../components/library/LibraryPage_style";
+import {inject, observer} from "mobx-react";
 
 
 let LibraryPageCurrent_style = styled.div`
@@ -78,7 +79,8 @@ let LibraryPageDefault_style = styled.div`
 `
 
 let LibraryPage;
-export default LibraryPage=({pag,menu})=>{
+export default LibraryPage=({pag})=>{
+
 
     let [side,SetSide] = useState(pag?.keySide ?? 'key')
     let [page,SetPage] = useState(pag?.keyPage ?? 'name')
@@ -91,7 +93,7 @@ export default LibraryPage=({pag,menu})=>{
             <Layout>
                 <LibraryPage_style>
                     <div className="menu_library_style">
-                        <MenuLibrary menu={menu}/>
+                        <MenuLibrary/>
                     </div>
                 {pag?<LibraryPageCurrent_style>
                     <div id={'key'}><p>{side}</p></div>
@@ -115,11 +117,17 @@ export default LibraryPage=({pag,menu})=>{
 
 
 LibraryPage.getInitialProps = async ({query})=>{
-    let r;
-    query.id === 'home'?r=undefined:r=query.id
+    let response,menu,resp,pag,r;
+    query.id === 'home'
+        ?
+        pag=undefined
+        :
+        pag=query.id
+        // pag = await fetch( `/api/libraryPage?`+query.id).then(resp=>resp.json())
+
+
     return{
-      pag:r,
-        menu:[]
+      pag:pag,
     }
 }
 
