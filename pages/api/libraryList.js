@@ -19,8 +19,7 @@ export default function (req,res){
         }
     ]
 
-    let library=[ ...LibraryList]
-    res.json(library)
+    res.json(LibraryList)
 }
 
 
