@@ -1,0 +1,27 @@
+{
+  "name": "next-pro",
+  "version": "1.0.0",
+  "description": "Hello People",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ge1Zer/next-pro.git"
+  },
+  "keywords": [],
+  "author": "KiPro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ge1Zer/next-pro/issues"
+  },
+  "homepage": "https://github.com/Ge1Zer/next-pro#readme",
+  "dependencies": {
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
