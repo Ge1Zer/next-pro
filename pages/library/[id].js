@@ -2,6 +2,8 @@ import Layout from "../../components/Layout";
 import Library_back from "../../components/library/Library_back";
 import styled from "styled-components";
 import React,{useState} from 'react';
+import MenuLibrary from "../../components/library/LibraryMenu";
+import LibraryPage_style from "../../components/library/LibraryPage_style";
 
 
 let LibraryPageCurrent_style = styled.div`
@@ -76,7 +78,7 @@ let LibraryPageDefault_style = styled.div`
 `
 
 let LibraryPage;
-export default LibraryPage=({pag})=>{
+export default LibraryPage=({pag,menu})=>{
 
     let [side,SetSide] = useState(pag?.keySide ?? 'key')
     let [page,SetPage] = useState(pag?.keyPage ?? 'name')
@@ -87,6 +89,10 @@ export default LibraryPage=({pag})=>{
     return (
         <Library_back>
             <Layout>
+                <LibraryPage_style>
+                    <div className="menu_library_style">
+                        <MenuLibrary menu={menu}/>
+                    </div>
                 {pag?<LibraryPageCurrent_style>
                     <div id={'key'}><p>{side}</p></div>
                     <div id={'name'}><p>{page}</p></div>
@@ -99,6 +105,7 @@ export default LibraryPage=({pag})=>{
                         <p>The library is temporarily <h2>closed</h2></p>
                     </LibraryPageDefault_style>
                 }
+                </LibraryPage_style>
             </Layout>
         </Library_back>
 
@@ -111,7 +118,8 @@ LibraryPage.getInitialProps = async ({query})=>{
     let r;
     query.id === 'home'?r=undefined:r=query.id
     return{
-      pag:r
+      pag:r,
+        menu:[]
     }
 }
 
