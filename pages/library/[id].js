@@ -1,6 +1,8 @@
-export default function Page({page}){
+import Layout from "../../components/Layout";
+
+export default function LibraryPage({page}){
     return(
-        <>
+        <Layout>
             {
                 page ?
                 <>
@@ -11,11 +13,10 @@ export default function Page({page}){
                     page null
                 </>
             }
-
-        </>
+        </Layout>
     )
 }
-Page.getInitialProps = async ({query})=>{
+LibraryPage.getInitialProps = async ({query})=>{
     let r;
     query.id === 'home'?r=undefined:r=query.id
     return{
