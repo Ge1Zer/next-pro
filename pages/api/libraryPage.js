@@ -1,31 +1,31 @@
 export default function (req,res){
     let LibraryPage = [
         {
-            id: '1', keySide: 'HTML5', keyPage: 'Simple',key:'CRf7RmRVh', content: {
+            id: '1', keySide: 'HTML5', keyPage: 'Simple',key:'tevi8', content: {
                 name: 'HTML5',
                 text: 'HyperText Markup Language',
                 photo: {id: 11}
             }
         }, {
-            id: '2', keySide: 'CSS3', keyPage: 'Simple',key:'AF1VB48f7', content: {
+            id: '2', keySide: 'CSS3', keyPage: 'Simple',key:'4o90g', content: {
                 name: 'CSS3',
                 text: 'Cascading Style Sheets',
                 photo: {id: 21}
             }
         }, {
-            id: '3', keySide: 'SASS', keyPage: 'Simple',key:'Itq07G2gY', content: {
+            id: '3', keySide: 'SASS', keyPage: 'Simple',key:'1b1qi', content: {
                 name: 'SASS/LESS',
                 text: 'Syntactically Awesome Stylesheets',
                 photo: {id: 31}
             }
         }, {
-            id: '4', keySide: 'Native', keyPage: 'Simple',key:'v8tfJU0Nc', content: {
+            id: '4', keySide: 'Native', keyPage: 'Simple',key:'6iffi', content: {
                 name: 'JS Native',
                 text: 'JavaScript Native',
                 photo: {id: 41}
             }
         }, {
-            id: '4', keySide: 'React', keyPage: 'Native',key:'uLMSEIQsB', content: {
+            id: '4', keySide: 'React', keyPage: 'Native',key:'yzwra', content: {
                 name: 'React',
                 text: 'A JavaScript library for building user interfaces',
                 photo: {id: 51}
