@@ -12,6 +12,7 @@ const ListMenu = styled.ul`
     
     .list_1{
        color:white;
+       
         margin: 10px 0 0 10px;
         &>ul, &>input{
             display:none;
@@ -21,7 +22,7 @@ const ListMenu = styled.ul`
        }
             &>ul>.list_2{
                  color:yellow;
-                 margin: 0 0 0 10px;
+               
                   &>ul, &>input{
                         display:none;
                     }
@@ -29,7 +30,7 @@ const ListMenu = styled.ul`
                         display:block;
                    }
                    &>ul>.list_3{
-                    margin: 0 0 0 10px;
+                    
                     &>a{
                     color:rgba(245,245,245,1);
                    } 

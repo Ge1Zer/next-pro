@@ -27,7 +27,7 @@ let LibraryPage_style = styled.div`
 
 
 @media (max-width : 768px) {
-    font-size:0.8em;
+    font-size:0.7em;
     
     grid-template: 1fr/9fr 3fr;
     grid-template-areas: "page menu";
@@ -35,7 +35,7 @@ let LibraryPage_style = styled.div`
     margin: 2%;
     }
     &>#lib-me{
-        padding:30% 0 0 0;
+        padding:50% 0 0 0;  
     }
   
 }
