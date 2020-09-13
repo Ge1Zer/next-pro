@@ -85,7 +85,7 @@ export default LibraryPage=({pag})=>{
         <Library_back>
             <Layout>
                 <LibraryPage_style>
-                    <div className="menu_library_style">
+                    <div className="menu_library_style" id={'lib-me'}>
                         <MenuLibrary/>
                     </div>
                 {pag?<LibraryPageCurrent_style>

@@ -8,6 +8,7 @@ module.exports = withVideos(withImages({
     ,env: {
         //baseURI:'http://localhost:3000',
          baseURI:'https://next-pro-iota.vercel.app',
+
     }
 
     ,exportPathMap() {
