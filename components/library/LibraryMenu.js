@@ -57,9 +57,7 @@ export default class MenuLibrary extends React.Component{
         return Math.floor(Math.random() * Math.floor(max));
     }
 
-    render()
-{
-
+    render() {
 
     return (
 
@@ -72,7 +70,7 @@ export default class MenuLibrary extends React.Component{
                         <label htmlFor={`s${ri}`}><span>{i.name}</span></label>
                         <input type={'checkbox'} id={`s${ri}`} checked/>
                         <ul>
-                            {i.list.sort(function (a, b) {
+                            {i.list.slice().sort((a, b)=>{
                                 let nameA = a.frame.toLowerCase(), nameB = b.frame.toLowerCase()
                                 if (nameA < nameB) //сортируем строки по возрастанию
                                     return -1
@@ -80,6 +78,7 @@ export default class MenuLibrary extends React.Component{
                                     return 1
                                 return 0 // Никакой сортировки
                             }).map(r => {
+
                                 let rie = this.getRandomInt(10000)
                                 return (
                                     <li className={'list_2'}>

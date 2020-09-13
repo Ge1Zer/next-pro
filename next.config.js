@@ -5,6 +5,10 @@ const withImages = require('next-images')
 module.exports = withVideos(withImages({
     assetDirectory: 'static'
     , webpack(config, options) {return config}
+    ,env: {
+        //baseURI:'http://localhost:3000',
+         baseURI:'https://next-pro-iota.vercel.app',
+    }
 
     ,exportPathMap() {
         return {

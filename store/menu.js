@@ -1,8 +1,12 @@
-import {observable, action} from 'mobx';
+import {observable, action, computed} from 'mobx';
 import 'mobx-react-lite/batchingForReactDom'
 
 export default class Menu {
     @observable menu=[];
+
+    @computed get sortedMenu() {
+        return this.menu.slice().sort( (a,b)=>a.id-b.id)
+    }
 
     @action getListMenu() {
         fetch( `/api/libraryList`,{
@@ -12,7 +16,6 @@ export default class Menu {
             },
         }).then(r =>r.json())
             .then(t=>{
-                // console.log(t.sort( (a,b)=>a.id-b.id) )
                 this.menu = t
 
             })

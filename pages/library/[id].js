@@ -114,7 +114,7 @@ LibraryPage.getInitialProps = async ({query})=>{
     if(query.id === 'home'){
         pag=undefined
     }else{
-        pag = await fetch( `https://next-pro-iota.vercel.app/api/libraryPage?key=`+query.id).then(i=>i.json())
+        pag = await fetch( `${process.env.baseURI}/api/libraryPage?key=`+query.id).then(i=>i.json())
     }
 
 
@@ -125,5 +125,4 @@ LibraryPage.getInitialProps = async ({query})=>{
       pag:pag,
     }
 }
-
 
