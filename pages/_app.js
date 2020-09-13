@@ -3,7 +3,7 @@ import App from 'next/app';
 import './css/style.css'
 
 
-import AppWith from "../lib/connect-redux";
+import AppWith from "../lib/connect-mobx";
 import {Provider} from "mobx-react";
 
 class MyApp extends App {

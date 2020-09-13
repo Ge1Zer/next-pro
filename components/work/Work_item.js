@@ -68,10 +68,8 @@ let Work_item_style = styled.div`
 `
 let Work_item;
 export default Work_item=({i})=>{
-    console.log(i)
 let {ListPhoto,name,text,stack, id,link  } = i
    let Li=ListPhoto.photo,cont = 0
-    console.log(stack)
     return(
         <Work_item_style>
                 <div className="work_vi_photo">
